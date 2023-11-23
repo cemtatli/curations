@@ -1,22 +1,43 @@
 import { categories } from '@/data'
 import { NavbarProps } from '@/types'
-import Link from 'next/link'
+
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu'
+
+import ListItem from '@/components/navbar-item'
 
 const Navbar: React.FC<NavbarProps> = () => {
   return (
-    <nav>
-      <ul className="flex items-center justify-between gap-x-5">
+    <NavigationMenu>
+      <NavigationMenuList>
         {categories.map(category => {
           return (
-            <li key={category.id}>
-              <Link href={`?category=${category.id}`} className="text-sm font-semibold">
-                {category.title}
-              </Link>
-            </li>
+            <NavigationMenuItem key={category.id}>
+              <NavigationMenuTrigger>{category.title}</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[400px] gap-4 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                  {category.subcategories.map(subcategory => {
+                    return (
+                      <ListItem
+                        key={subcategory.title}
+                        title={subcategory.title}
+                        href={`?categories=${category.id}&subcategory=${subcategory.id}`}>
+                        {subcategory?.description}
+                      </ListItem>
+                    )
+                  })}
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
           )
         })}
-      </ul>
-    </nav>
+      </NavigationMenuList>
+    </NavigationMenu>
   )
 }
 
