@@ -1,4 +1,6 @@
+import Container from '@/components/container';
+
 const IndexPage = () => {
-	return <div>Hello World</div>;
+	return <Container>Hello World</Container>;
 };
 export default IndexPage;
