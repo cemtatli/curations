@@ -1,3 +1,5 @@
+'use client';
+
 import Logo from '@/components/logo';
 import Container from '@/components/container';
 import ThemeToggleButton from '@/components/theme-button';

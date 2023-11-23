@@ -11,9 +11,11 @@ import {
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { useWindowSize } from '@uidotdev/usehooks';
 
 const ThemeToggleButton = () => {
 	const { setTheme } = useTheme();
+	const size = useWindowSize();
 
 	const settings = [
 		{
@@ -42,7 +44,9 @@ const ThemeToggleButton = () => {
 					<span className='sr-only'>Toggle theme</span>
 				</Button>
 			</DropdownMenuTrigger>
-			<DropdownMenuContent align='center' className='text-xs sm:text-sm font-medium min-w-[6.5rem]'>
+			<DropdownMenuContent
+				align={size?.width && size.width > 768 ? 'center' : 'end'}
+				className='text-xs sm:text-sm font-medium min-w-[6.5rem]'>
 				{settings.map(mode => (
 					<DropdownMenuItem
 						key={mode.mode}
