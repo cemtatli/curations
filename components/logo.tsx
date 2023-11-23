@@ -1,4 +1,8 @@
-const Logo = ({ size }: { size: number }) => {
+interface LogoProps {
+	size: number;
+}
+
+const Logo: React.FC<LogoProps> = ({ size }) => {
 	return (
 		<svg width={size} viewBox='0 0 71 99' fill='none' xmlns='http://www.w3.org/2000/svg'>
 			<path
@@ -7,4 +11,5 @@ const Logo = ({ size }: { size: number }) => {
 		</svg>
 	);
 };
+
 export default Logo;
