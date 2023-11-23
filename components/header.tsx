@@ -1,21 +1,22 @@
 'use client'
 
 import Logo from '@/components/logo'
-import Container from '@/components/container'
 import ThemeToggleButton from '@/components/theme-button'
+import Navbar from '@/components/navbar'
 
 const Header = () => {
   return (
-    <header className="flex h-16 items-center justify-start border-b">
-      <Container>
+    <header className="flex h-16 w-full items-center justify-between px-8 md:px-20">
+      <>
         <div className="flex items-center justify-between">
-          <p className="font-handwriting flex items-center justify-center gap-x-2 font-semibold text-epigra">
+          <p className="font-handwriting flex items-center justify-center gap-x-1 font-semibold">
             <Logo size={16} />
-            <div> curations</div>
+            curations
           </p>
-          <ThemeToggleButton />
         </div>
-      </Container>
+        <Navbar />
+        <ThemeToggleButton />
+      </>
     </header>
   )
 }

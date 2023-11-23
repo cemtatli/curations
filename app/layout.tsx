@@ -7,7 +7,6 @@ import { ThemeProvider } from '@/providers/theme-provider'
 
 export const fontSans = FontSans({
   subsets: ['latin'],
-  fallback: ['sans-serif'],
   weight: ['300', '400', '500', '600', '700', '900'],
 })
 
@@ -17,8 +16,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <head />
       <body className={fontSans.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Header />
-          <main>{children}</main>
+          <div className="bg-grid-slate-200/50 min-h-screen dark:bg-none">
+            <Header />
+            <main>{children}</main>
+          </div>
         </ThemeProvider>
       </body>
     </html>
