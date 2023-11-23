@@ -1,5 +1,3 @@
-import { fontFamily } from 'tailwindcss/defaultTheme';
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	darkMode: ['class'],
@@ -18,9 +16,6 @@ module.exports = {
 			},
 		},
 		extend: {
-			fontFamily: {
-				sans: ['var(--font-sans)', ...fontFamily.sans],
-			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -55,6 +50,9 @@ module.exports = {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))',
 				},
+				epigra: {
+					DEFAULT: 'hsl(var(--epigra))',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -77,5 +75,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate'), ['prettier-plugin-tailwindcss']],
+	plugins: ['prettier-plugin-tailwindcss', require('tailwindcss-animate')],
 };
