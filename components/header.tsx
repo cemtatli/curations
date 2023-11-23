@@ -3,8 +3,8 @@
 import Logo from '@/components/logo'
 
 import Navbar from '@/components/navbar'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import AddBookmarkModal from '@/components/add-bookmark'
 
 const Header = () => {
   return (
@@ -17,8 +17,7 @@ const Header = () => {
         </Link>
       </div>
       <Navbar />
-
-      <Button variant="epigra">Add your bookmark</Button>
+      <AddBookmarkModal />
     </header>
   )
 }

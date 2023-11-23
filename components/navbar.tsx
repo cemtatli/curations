@@ -14,13 +14,13 @@ import ListItem from '@/components/navbar-item'
 const Navbar: React.FC<NavbarProps> = () => {
   return (
     <NavigationMenu>
-      <NavigationMenuList>
+      <NavigationMenuList className="w-[45rem]">
         {categories.map(category => {
           return (
             <NavigationMenuItem key={category.id}>
               <NavigationMenuTrigger>{category.title}</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-4 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                <ul className="grid w-[400px] gap-4 p-4 md:w-[35rem] md:grid-cols-2 lg:w-[45rem]">
                   {category.subcategories.map(subcategory => {
                     return (
                       <ListItem

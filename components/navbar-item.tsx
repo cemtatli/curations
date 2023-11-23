@@ -15,7 +15,7 @@ const ListItem = React.forwardRef<React.ElementRef<'a'>, React.ComponentPropsWit
             )}
             {...props}>
             <div className="text-sm font-medium leading-none">{title}</div>
-            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">{children}</p>
+            <p className="line-clamp-3 text-xs leading-snug text-muted-foreground">{children}</p>
           </a>
         </NavigationMenuLink>
       </li>
