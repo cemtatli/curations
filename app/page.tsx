@@ -1,6 +1,4 @@
-import Container from '@/components/container';
-
 const IndexPage = () => {
-	return <Container>Hello World</Container>;
-};
-export default IndexPage;
+  return <section className="px-8"></section>
+}
+export default IndexPage

@@ -19,6 +19,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="bg-grid-slate-200/50 min-h-screen dark:bg-none">
             <Header />
             <main>{children}</main>
+            <div className="absolute top-0 -z-10 h-full w-full bg-white backdrop-blur-3xl">
+              <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
+            </div>
           </div>
         </ThemeProvider>
       </body>
