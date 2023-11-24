@@ -1,9 +1,5 @@
 import { cn } from '@/lib/utils'
-
-interface LogoProps {
-  size: number
-  className?: string
-}
+import { LogoProps } from '@/types'
 
 const Logo: React.FC<LogoProps> = ({ size, className }) => {
   return (

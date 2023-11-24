@@ -1,6 +1,11 @@
 export interface RootLayoutProps {
   children: React.ReactNode
 }
+
+export interface LogoProps {
+  size: number
+  className?: string
+}
 export interface NavbarProps {
   categories?: {
     title: string

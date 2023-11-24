@@ -10,7 +10,7 @@ const AddBookmarkModal = () => {
         <Button variant="epigra">Add Bookmark</Button>
       </Drawer.Trigger>
       <Drawer.Portal>
-        <Drawer.Overlay className="fixed inset-0 z-10 bg-muted-foreground/50 backdrop-blur" />
+        <Drawer.Overlay className="fixed inset-0 z-10 bg-muted-foreground/20 backdrop-blur-sm" />
         <Drawer.Content className="fixed bottom-0 left-0 right-0 z-30 mt-24 flex h-[95%] flex-col rounded-t-xl">
           <div className="flex-1 rounded-t-xl bg-white p-4">
             <div className="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-zinc-300" />

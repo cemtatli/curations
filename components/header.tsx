@@ -13,7 +13,7 @@ const Header = () => {
         <Link
           href="/"
           className="flex items-center justify-center gap-x-1 bg-gradient-to-tr font-handwriting font-semibold">
-          <Logo size={24} />
+          <Logo size={26} />
         </Link>
       </div>
       <Navbar />
