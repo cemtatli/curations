@@ -30,7 +30,7 @@ const SubmitLinkForm = () => {
   return (
     <form className="flex w-full items-end justify-center gap-2.5 max-md:flex-col" onSubmit={handleSubmit}>
       <div className="flex w-full flex-1 flex-col gap-2">
-        <Label htmlFor="submit_link">Submit Link</Label>
+        <Label htmlFor="submit_link">Link</Label>
         <Input
           id="submit_link"
           type="text"
