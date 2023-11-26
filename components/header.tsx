@@ -1,10 +1,10 @@
-import Logo from '@/components/logo'
-
-import { getHeader } from '@/sanity/lib/sanity-utils'
-import Navbar from '@/components/navbar'
 import Link from 'next/link'
+import { getHeader } from '@/sanity/lib/sanity-utils'
+
 import DrawerModal from '@/components/ui/drawer'
-import SubmitLinkForm from './form'
+import Navbar from '@/components/navbar'
+import SubmitLinkForm from '@/components/form'
+import Logo from '@/components/logo'
 
 const getData = async () => {
   const header = await getHeader()
