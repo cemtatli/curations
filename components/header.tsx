@@ -1,13 +1,18 @@
-'use client'
-
 import Logo from '@/components/logo'
 
 import Navbar from '@/components/navbar'
 import Link from 'next/link'
 import DrawerModal from '@/components/ui/drawer'
 import SubmitLinkForm from './form'
+import { getHeader } from '@/sanity/lib/sanity-utils'
 
-const Header = () => {
+const getData = async () => {
+  const header = await getHeader()
+  return header
+}
+
+const Header = async () => {
+  const header = await getData()
   return (
     <header className="flex h-20 w-full items-center justify-between px-8 md:px-20">
       <div className="flex items-center justify-between">
@@ -17,7 +22,6 @@ const Header = () => {
           <Logo size={26} />
         </Link>
       </div>
-      <Navbar />
       <DrawerModal trigger="Add">
         <div className="mt-14 flex flex-col gap-10">
           <p className="text-center">
@@ -26,6 +30,8 @@ const Header = () => {
           <SubmitLinkForm />
         </div>
       </DrawerModal>
+
+      <Navbar header={header} />
     </header>
   )
 }
