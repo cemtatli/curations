@@ -1,7 +1,7 @@
 import './globals.css'
 import { Inter as FontSans } from 'next/font/google'
 import { Metadata } from 'next'
-import { RootLayoutProps } from '@/types'
+
 import Header from '@/components/header'
 
 export const fontSans = FontSans({
@@ -9,12 +9,12 @@ export const fontSans = FontSans({
   weight: ['300', '400', '500', '600', '700', '900'],
 })
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={fontSans.className}>
-        <div className="bg-square min-h-screen dark:bg-none">
+        <div className="bg-square min-h-screen">
           <Header />
           <main>{children}</main>
           <div className="absolute top-0 -z-10 h-full w-full bg-white backdrop-blur-3xl">

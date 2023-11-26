@@ -104,4 +104,29 @@ export const categories = [
       },
     ],
   },
+  {
+    title: 'Learning',
+    id: 'learning',
+    color: 'blue',
+    subcategories: [
+      {
+        title: 'AI',
+        description: 'AI is the creation of a plan or convention for the construction of an object or a system.',
+        id: 'ai',
+        color: 'blue',
+      },
+      {
+        title: 'Startups',
+        description: ' Startups is the process of translating user stories into a deployable product.',
+        id: '',
+        color: 'blue',
+      },
+      {
+        title: 'Productivity',
+        description: 'Productivity describes various measures of the efficiency of production.',
+        id: 'productivity',
+        color: 'blue',
+      },
+    ],
+  },
 ]

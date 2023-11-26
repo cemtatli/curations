@@ -24,7 +24,7 @@ const Header = async () => {
         </Link>
       </div>
       <Navbar header={header} />
-      <DrawerModal trigger="Add">
+      <DrawerModal trigger="Submit Link">
         <div className="mt-14 flex flex-col gap-10">
           <p className="text-center">
             Each link that is submitted will be reviewed. And if it’s good, it will be featured on Curations.
