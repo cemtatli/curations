@@ -5,9 +5,14 @@ export async function getHeader(): Promise<any> {
   return client.fetch(groq`*[_type == "mainCategory"]{
     _id,
     name,
+    slug,
+    color,
     "subCategories": subCategories[]->{
+      _id,
       name,
-      description
+      description,
+      slug,
+      color
     }
   }`)
 }
