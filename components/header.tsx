@@ -4,7 +4,8 @@ import Logo from '@/components/logo'
 
 import Navbar from '@/components/navbar'
 import Link from 'next/link'
-import AddBookmarkModal from '@/components/add-bookmark'
+import DrawerModal from '@/components/ui/drawer'
+import SubmitLinkForm from './form'
 
 const Header = () => {
   return (
@@ -17,7 +18,14 @@ const Header = () => {
         </Link>
       </div>
       <Navbar />
-      <AddBookmarkModal />
+      <DrawerModal trigger="Add">
+        <div className="mt-14 flex flex-col gap-10">
+          <p className="text-center">
+            Each link that is submitted will be reviewed. And if it’s good, it will be featured on Curations.
+          </p>
+          <SubmitLinkForm />
+        </div>
+      </DrawerModal>
     </header>
   )
 }

@@ -16,7 +16,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body className={fontSans.className}>
         <div className="bg-square min-h-screen dark:bg-none">
           <Header />
-          ff4e00
           <main>{children}</main>
           <div className="absolute top-0 -z-10 h-full w-full bg-white backdrop-blur-3xl">
             <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(255,78,24,0.35)] opacity-60 blur-[80px]"></div>
