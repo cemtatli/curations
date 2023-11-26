@@ -12,6 +12,19 @@ const subCategorySchema: SchemaTypeDefinition = {
       name: 'description',
       type: 'string',
     },
+    {
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+    },
+    {
+      name: 'color',
+      type: 'string',
+    },
+
   ],
 }
 
@@ -21,6 +34,18 @@ const mainCategorySchema: SchemaTypeDefinition = {
   fields: [
     {
       name: 'name',
+      type: 'string',
+    },
+    {
+      name: 'slug',
+      type: 'slug',
+      options: {
+        source: 'name',
+        maxLength: 96,
+      },
+    },
+    {
+      name: 'color',
       type: 'string',
     },
     {

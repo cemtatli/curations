@@ -1,12 +1,17 @@
-'use client'
-
 import Logo from '@/components/logo'
 
 import Navbar from '@/components/navbar'
 import Link from 'next/link'
 import AddBookmarkModal from '@/components/add-bookmark'
+import { getHeader } from '@/sanity/lib/sanity-utils'
 
-const Header = () => {
+const getData = async () => {
+  const header = await getHeader()
+  return header
+}
+
+const Header = async () => {
+  const header = await getData()
   return (
     <header className="flex h-20 w-full items-center justify-between px-8 md:px-20">
       <div className="flex items-center justify-between">
@@ -16,7 +21,7 @@ const Header = () => {
           <Logo size={26} />
         </Link>
       </div>
-      <Navbar />
+      <Navbar header={header} />
       <AddBookmarkModal />
     </header>
   )

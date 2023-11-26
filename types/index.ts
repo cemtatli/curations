@@ -7,17 +7,17 @@ export interface LogoProps {
   className?: string
 }
 export interface NavbarProps {
-  categories?: {
-    title: string
-    slug: string
-    id: string
-    color?: string
-    subcategories?: {
-      title: string
-      description?: string
-      slug: string
-      id: string
-      color?: string
-    }
-  }
+  header: {
+    name: string
+    slug: { current: string }
+    _id: string
+    color: string
+    subCategories: {
+      name: string
+      description: string
+      slug: { current: string }
+      _id: string
+      color: string
+    }[]
+  }[]
 }

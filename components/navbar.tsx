@@ -1,4 +1,4 @@
-import { categories } from '@/data'
+'use client'
 import { NavbarProps } from '@/types'
 
 import {
@@ -11,31 +11,28 @@ import {
 
 import ListItem from '@/components/navbar-item'
 
-const Navbar: React.FC<NavbarProps> = () => {
+const Navbar: React.FC<NavbarProps> = ({ header }) => {
+  console.log(header[0].subCategories[0].slug.current)
   return (
     <NavigationMenu>
       <NavigationMenuList className="w-[45rem]">
-        {categories.map(category => {
-          return (
-            <NavigationMenuItem key={category.id}>
-              <NavigationMenuTrigger>{category.title}</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-4 p-4 md:w-[35rem] md:grid-cols-2 lg:w-[45rem]">
-                  {category.subcategories.map(subcategory => {
-                    return (
-                      <ListItem
-                        key={subcategory.title}
-                        title={subcategory.title}
-                        href={`?categories=${category.id}&subcategory=${subcategory.id}`}>
-                        {subcategory?.description}
-                      </ListItem>
-                    )
-                  })}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-          )
-        })}
+        {header.map(category => (
+          <NavigationMenuItem key={category._id}>
+            <NavigationMenuTrigger>{category.name}</NavigationMenuTrigger>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-4 p-4 md:w-[35rem] md:grid-cols-2 lg:w-[45rem]">
+                {category.subCategories.map(subcategory => (
+                  <ListItem
+                    key={subcategory._id}
+                    title={subcategory.name}
+                    href={`?categories=${category.slug.current}&subcategory=${subcategory.slug.current}`}>
+                    {subcategory?.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+        ))}
       </NavigationMenuList>
     </NavigationMenu>
   )
