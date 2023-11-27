@@ -1,13 +1,12 @@
 import { Inter as FontSans } from 'next/font/google'
 import { Metadata } from 'next'
-import { RootLayoutProps } from '@/types'
 
 const fontSans = FontSans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '900'],
 })
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
@@ -18,6 +17,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
   )
 }
 export const metadata: Metadata = {
-  title: 'Curations for Epigra',
+  title: 'Curation - Tools & Resources',
   description: 'Developers, designers, and other creatives share their favorite tools and resources.',
 }
