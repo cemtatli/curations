@@ -2,7 +2,7 @@ import { Inter as FontSans } from 'next/font/google'
 import { Metadata } from 'next'
 import { RootLayoutProps } from '@/types'
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '900'],
 })

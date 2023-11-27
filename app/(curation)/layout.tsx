@@ -4,7 +4,7 @@ import { Metadata } from 'next'
 import { RootLayoutProps } from '@/types'
 import Header from '@/components/header'
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '900'],
 })
