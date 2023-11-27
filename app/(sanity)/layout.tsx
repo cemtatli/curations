@@ -1,7 +1,7 @@
 import { Inter as FontSans } from 'next/font/google'
 import { Metadata } from 'next'
 
-export const fontSans = FontSans({
+const fontSans = FontSans({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700', '900'],
 })
