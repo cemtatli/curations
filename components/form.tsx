@@ -26,9 +26,9 @@ const AddBookmarkForm = () => {
     setIsValid(isValidURL(inputValue))
   }
   const autoFillData = () => {
+    setLoading(true)
     try {
-      if (isValid) {
-        setLoading(true)
+      if (isValidURL(data)) {
         toast.promise(
           new Promise(resolve => {
             setTimeout(() => {
@@ -41,11 +41,10 @@ const AddBookmarkForm = () => {
             error: 'Something went wrong',
           },
         )
-      } else {
-        toast.error('Please enter a valid link')
       }
     } finally {
       setLoading(false)
+      setData('')
     }
   }
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -71,21 +70,6 @@ const AddBookmarkForm = () => {
             {cards.map(item => (
               <SelectItem key={item.subcategoryId} value={item.subcategoryId}>
                 {item.subcategoryId}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="flex w-full flex-1 flex-col gap-2">
-        <Label htmlFor="submit_link">Select Subcategory</Label>
-        <Select>
-          <SelectTrigger>
-            <SelectValue placeholder="Select Subcategory" />
-          </SelectTrigger>
-          <SelectContent>
-            {cards.map(item => (
-              <SelectItem key={item.subcategoryId} value={item.categoryId}>
-                {item.categoryId}
               </SelectItem>
             ))}
           </SelectContent>
