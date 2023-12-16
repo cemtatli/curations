@@ -3,6 +3,7 @@ import { Inter as FontSans } from 'next/font/google'
 import { Metadata } from 'next'
 
 import Header from '@/components/header'
+import { Toaster } from 'react-hot-toast'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -17,10 +18,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="bg-square min-h-screen">
           <Header />
           <main>{children}</main>
-          <div className="absolute top-0 -z-10 h-full w-full bg-white backdrop-blur-3xl">
-            <div className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(255,78,24,0.35)] opacity-60 blur-[80px]"></div>
-          </div>
         </div>
+        <Toaster position="top-center" reverseOrder={false} />
       </body>
     </html>
   )

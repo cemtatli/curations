@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Label } from '@/components/ui/label'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
+import toast from 'react-hot-toast'
 
 const SubmitLinkForm = () => {
   const [data, setData] = useState('')
@@ -25,6 +26,7 @@ const SubmitLinkForm = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     if (isValid) setData('')
+    toast.success('Link submitted successfully')
   }
 
   return (
@@ -33,14 +35,7 @@ const SubmitLinkForm = () => {
         <Label htmlFor="submit_link" className="sr-only">
           Link
         </Label>
-        <Input
-          id="submit_link"
-          type="text"
-          className="invalid:border-red-600"
-          value={data}
-          onChange={handleChange}
-          placeholder="https://epigra.com"
-        />
+        <Input id="submit_link" type="text" value={data} onChange={handleChange} placeholder="https://epigra.com" />
       </div>
       <Button type="submit" variant="epigra" disabled={data.length === 0 || !isValid}>
         Submit

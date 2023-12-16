@@ -24,6 +24,7 @@
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-hot-toast": "^2.4.1",
     "sanity": "^3.20.1",
     "styled-components": "^6.1.1",
     "tailwind-merge": "^2.0.0",
