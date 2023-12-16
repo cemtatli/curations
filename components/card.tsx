@@ -8,9 +8,10 @@ type cardProps = {
   title: string
   description: string
   categoryId: string
+  keywords: any
 }
 
-const Card: React.FC<cardProps> = ({ id, title, description, categoryId }) => {
+const Card: React.FC<cardProps> = ({ id, title, description, keywords }) => {
   return (
     <div
       key={id}
@@ -18,11 +19,15 @@ const Card: React.FC<cardProps> = ({ id, title, description, categoryId }) => {
       <div className="flex flex-col gap-4">
         <h2 className="text-lg font-semibold">{title}</h2>
         <p className="text-sm">{description}</p>
-        <Link href={`/`} className="relative flex-1 cursor-pointer rounded-lg">
+        <Link href={`/`} className="relative flex-1 cursor-pointer rounded-lg ">
           <img src="https://placehold.co/800x400" alt={title} className="rounded-lg" />
-          <Badge variant="secondary" className="absolute bottom-5 left-5 w-fit text-xs">
-            {categoryId}
-          </Badge>
+          {/*           <div className="absolute bottom-5 left-5 flex items-center justify-start gap-x-2">
+            {keywords.map((keyword: any, index: any) => (
+              <Badge key={index} variant="secondary" className="whitespace-nowrap text-xs">
+                {keyword}
+              </Badge>
+            ))}
+          </div> */}
         </Link>
       </div>
     </div>

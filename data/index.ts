@@ -135,10 +135,11 @@ export const cards = [
   {
     title: 'Typography',
     id: 'typography',
-    categoryId: 'design',
-    subcategoryId: 'typography',
+    categoryId: 'a',
+    subcategoryId: 'ab',
     color: 'red',
     icon: 'font',
+    keywords: [],
     description:
       'Typography is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
     resources: [
@@ -152,10 +153,11 @@ export const cards = [
   {
     title: 'Color',
     id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
+    categoryId: 'b',
+    subcategoryId: 'ba',
     color: 'red',
     icon: 'color-palette-outline',
+    keywords: ['color', 'color theory', 'color psychology'],
     description:
       'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
     resources: [
@@ -167,216 +169,13 @@ export const cards = [
     ],
   },
   {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
+    title: 'Layout',
+    id: 'asa',
+    categoryId: 'c',
+    subcategoryId: 'ca',
     color: 'red',
     icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
-    description:
-      'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
-    resources: [
-      {
-        title: 'Practical Typography',
-        description: 'A guide to web typography.',
-        link: 'https://practicaltypography.com/',
-      },
-    ],
-  },
-  {
-    title: 'Color',
-    id: 'color',
-    categoryId: 'design',
-    subcategoryId: 'color',
-    color: 'red',
-    icon: 'color-palette-outline',
+    keywords: ['color', 'color theory', 'color psychology', 'color', 'co'],
     description:
       'Color is the art and technique of arranging type to make written language legible, readable, and appealing when displayed.',
     resources: [

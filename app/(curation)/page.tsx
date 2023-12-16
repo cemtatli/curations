@@ -16,6 +16,7 @@ const IndexPage = async () => {
             description={card.description}
             key={card.id}
             id={card.id}
+            keywords={card.keywords}
           />
         ))}
       </div>
