@@ -21,6 +21,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "next": "14.0.3",
+    "next-intl": "^3.3.2",
     "next-sanity": "^5.5.10",
     "next-themes": "^0.2.1",
     "react": "^18",
