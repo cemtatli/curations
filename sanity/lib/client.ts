@@ -8,3 +8,10 @@ export const client = createClient({
   projectId,
   useCdn,
 })
+
+export const postSiteClient = createClient({
+  dataset,
+  projectId,
+  useCdn,
+  token: process.env.SANITY_CREATE_TOKEN,
+})

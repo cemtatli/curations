@@ -70,7 +70,7 @@ const sitesSchema: SchemaTypeDefinition = {
     {
       name: 'keywords',
       type: 'array',
-      of: [{ type: 'string' }],
+      of: [{ type: 'reference', to: [{ type: 'keywords' }] }],
     },
     {
       name: 'subCategory',
@@ -80,6 +80,42 @@ const sitesSchema: SchemaTypeDefinition = {
   ],
 }
 
+const submitSitesSchema: SchemaTypeDefinition = {
+  name: 'draftSites',
+  type: 'document',
+  fields: [
+    {
+      name: 'name',
+      type: 'string',
+    },
+    {
+      name: 'url',
+      type: 'url',
+    },
+    {
+      name: 'keywords',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'keywords' }] }],
+    },
+    {
+      name: 'subCategory',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'subCategory' }] }],
+    },
+  ],
+}
+
+const keywordsSchema: SchemaTypeDefinition = {
+  name: 'keywords',
+  type: 'document',
+  fields: [
+    {
+      name: 'name',
+      type: 'string',
+    },
+  ],
+}
+
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [mainCategorySchema, subCategorySchema, sitesSchema],
+  types: [mainCategorySchema, subCategorySchema, sitesSchema, submitSitesSchema, keywordsSchema],
 }
