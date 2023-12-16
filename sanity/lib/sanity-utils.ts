@@ -16,3 +16,11 @@ export async function getHeader(): Promise<any> {
     }
   }`)
 }
+
+export async function getSubCategoryIds(): Promise<any> {
+  return client.fetch(groq`*[_type == "subCategory"]{
+    _id,
+    name,
+    slug
+  }`)
+}

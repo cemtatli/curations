@@ -18,8 +18,8 @@ const verifyRecaptcha = async (gRecaptchaToken: string) => {
 export const POST = async (request: NextRequest) => {
   try {
     const body = await request.json()
-    const { name, url, keywords, subCategory, gRecaptchaToken } = body
-    
+    const { url, subCategoryId, gRecaptchaToken } = body
+
     const recaptchaResult = await verifyRecaptcha(gRecaptchaToken)
     if (!recaptchaResult.success) {
       return NextResponse.json({ message: 'Recaptcha doğrulanamadı' }, { status: 200 })
@@ -28,10 +28,8 @@ export const POST = async (request: NextRequest) => {
     const newDraftSite = {
       _id: 'drafts.',
       _type: 'draftSites',
-      name,
       url,
-      keywords,
-      subCategory,
+      subCategory: { _type: 'reference', _ref: subCategoryId },
     }
     const newBookmark = await postSiteClient.create(newDraftSite)
     return NextResponse.json(newBookmark, { status: 200 })
