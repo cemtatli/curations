@@ -1,7 +1,10 @@
 'use client'
-import React, { useState } from 'react'
+import { useState } from 'react'
+import { useGoogleReCaptcha } from 'react-google-recaptcha-v3'
+import toast from 'react-hot-toast'
 
 const PostData = () => {
+  const { executeRecaptcha } = useGoogleReCaptcha()
   const [name, setName] = useState('')
   const [url, setUrl] = useState('')
   const [keywords, setKeywords] = useState('')
@@ -10,16 +13,19 @@ const PostData = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>): Promise<void> => {
     event.preventDefault()
 
-    const response = await fetch('/api/post-content', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({ name, url, keywords, subCategory }),
-    })
-
-    const data = await response.json()
-    console.log(data)
+    if (!executeRecaptcha) {
+      toast.error('Execute recaptcha not available yet')
+    } else {
+      const gRecaptchaToken = await executeRecaptcha('enquiryFormSubmit')
+      const response = await fetch('/api/post-content', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, url, keywords, subCategory, gRecaptchaToken }),
+      })
+      const data = await response.json()
+    }
   }
 
   return (
