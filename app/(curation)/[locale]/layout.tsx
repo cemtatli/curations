@@ -1,11 +1,12 @@
 import { Inter as FontSans } from 'next/font/google'
 import { Metadata } from 'next'
-import GoogleReCaptchaWrapper from '@/components/recaptcha-provider'
+
 import { notFound } from 'next/navigation'
 import Header from '@/components/header'
 import { Toaster } from 'react-hot-toast'
 import CustomNextIntlClientProvider from '@/components/next-intl-provider'
 import './globals.css'
+import GoogleReCaptchaWrapper from '@/providers/recaptcha-provider'
 
 const fontSans = FontSans({
   subsets: ['latin'],
