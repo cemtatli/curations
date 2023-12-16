@@ -1,5 +1,7 @@
 {
-  "Index": {
-    "title": "Sa"
+  "form": {
+    "title": "Hosgeldiniz!",
+    "description": "Tüm uygulamalarınızın sağlığını kontrol edin",
+    "submit": "Gönder"
   }
 }

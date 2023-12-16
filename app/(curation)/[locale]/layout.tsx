@@ -7,6 +7,7 @@ import { Toaster } from 'react-hot-toast'
 import CustomNextIntlClientProvider from '@/components/next-intl-provider'
 import './globals.css'
 import GoogleReCaptchaWrapper from '@/providers/recaptcha-provider'
+import { useMessages } from 'next-intl'
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -22,21 +23,22 @@ export default function LocaleLayout({
   children: React.ReactNode
   params: { locale: string }
 }) {
+  const messages = useMessages()
   if (!locales.includes(locale as any)) notFound()
 
   return (
-    <html lang={locale} suppressHydrationWarning>
+    <html lang={locale}>
       <head />
       <body className={fontSans.className}>
-        <GoogleReCaptchaWrapper>
-          <CustomNextIntlClientProvider locale={locale}>
+        <CustomNextIntlClientProvider locale={locale} messages={messages}>
+          <GoogleReCaptchaWrapper>
             <div className="bg-square min-h-screen">
               <Header />
               <main>{children}</main>
             </div>
             <Toaster position="top-center" reverseOrder={false} />
-          </CustomNextIntlClientProvider>
-        </GoogleReCaptchaWrapper>
+          </GoogleReCaptchaWrapper>
+        </CustomNextIntlClientProvider>
         <Toaster position="top-center" reverseOrder={false} />
       </body>
     </html>
