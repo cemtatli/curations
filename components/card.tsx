@@ -19,11 +19,11 @@ const Card: React.FC<cardProps> = ({ id, title, description, keywords }) => {
       <div className="flex flex-col gap-4">
         <h2 className="text-lg font-semibold">{title}</h2>
         <p className="text-sm">{description}</p>
-        <Link href={`/`} className="relative flex-1 cursor-pointer rounded-lg ">
-          <img src="https://placehold.co/800x400" alt={title} className="rounded-lg" />
+        <Link href="/" className="relative flex-1 cursor-pointer rounded-lg ">
+          <div className="flex h-[500px] w-full flex-1 rounded-b-lg bg-gradient-to-t from-sky-300  to-sky-50" />
           <div className="absolute bottom-2 left-2 flex items-center justify-start gap-x-2">
             {keywords.map((keyword: any, index: any) => (
-              <Badge key={index} variant="secondary" className="whitespace-nowrap text-xs">
+              <Badge key={index} variant="secondary">
                 {keyword}
               </Badge>
             ))}
