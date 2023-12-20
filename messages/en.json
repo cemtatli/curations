@@ -1,5 +1,9 @@
 {
   "form": {
     "title": "Welcome"
+  },
+  "intro": {
+    "title": "Curations",
+    "description": "Curated links for designers and developers."
   }
 }

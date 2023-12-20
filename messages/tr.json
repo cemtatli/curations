@@ -1,7 +1,6 @@
 {
-  "form": {
-    "title": "Hosgeldiniz!",
-    "description": "Tüm uygulamalarınızın sağlığını kontrol edin",
-    "submit": "Gönder"
+  "intro": {
+    "title": "Curations",
+    "description": "Tasarımcılar ve geliştiriciler için derlenmiş harika kaynaklar."
   }
 }
