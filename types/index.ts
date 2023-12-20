@@ -1,8 +1,8 @@
-export interface LogoProps {
+export type LogoProps = {
   size: number
   className?: string
 }
-export interface NavbarProps {
+export type NavbarProps = {
   header: {
     name: string
     slug: { current: string }
