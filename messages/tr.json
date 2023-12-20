@@ -1,4 +1,12 @@
 {
+  "form": {
+    "submit": "Gönder",
+    "submit_link": "Kaynak ekle",
+    "submit_link_description": "Her gönderilen kaynak incelenecek. Eğer iyi ise Curations'da yer alacak.",
+    "select_category": "Bir kategori seçin",
+    "link": "Link",
+    "auto_fill_data": "Otomatik doldur"
+  },
   "intro": {
     "title": "Curations",
     "description": "Tasarımcılar ve geliştiriciler için derlenmiş harika kaynaklar."

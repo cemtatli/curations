@@ -1,6 +1,11 @@
 {
   "form": {
-    "title": "Welcome"
+    "submit": "Welcome",
+    "submit_link": "Submit link",
+    "submit_link_description": "Each link that is submitted will be reviewed. And if it’s good, it will be featured on Curations.",
+    "select_category": "Select a category",
+    "link": "Link",
+    "auto_fill_data": "Auto fill data"
   },
   "intro": {
     "title": "Curations",
