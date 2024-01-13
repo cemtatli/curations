@@ -14,7 +14,7 @@ import {
 const Navbar: React.FC<NavbarProps> = ({ header }) => {
   return (
     <NavigationMenu>
-      <NavigationMenuList className="w-[45rem]">
+      <NavigationMenuList className="w-[45rem] max-md:hidden">
         {header.map(category => (
           <NavigationMenuItem key={category._id}>
             <NavigationMenuTrigger>{category.name}</NavigationMenuTrigger>
