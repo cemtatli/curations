@@ -24,3 +24,10 @@ export async function getSubCategoryIds(): Promise<any> {
     slug
   }`)
 }
+
+export async function checkUrlExists(url: string) {
+  const query = '*[(_type == "draftSites" || _type == "sites") && url == $url]'
+  const params = { url }
+  const results = await client.fetch(query, params)
+  return results.length > 0
+}
