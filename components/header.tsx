@@ -1,9 +1,11 @@
-import { getHeader } from '@/sanity/lib/sanity-utils'
 import Link from 'next/link'
+import { Link as Localization } from '@/navigation'
+
+import { getHeader } from '@/sanity/lib/sanity-utils'
+
+import { Button } from '@/components/ui/button'
 import Navbar from '@/components/navbar'
 import Logo from '@/components/logo'
-import { Button } from './ui/button'
-import { Link as Localization } from '@/navigation'
 import AddBookmark from '@/components/add-bookmark'
 
 const getData = async () => {
@@ -16,13 +18,11 @@ const Header = async () => {
 
   return (
     <header className="flex h-20 w-full items-center justify-between px-8 md:px-20">
-      <div className="flex items-center justify-between">
-        <Link
-          href="/"
-          className="flex items-center justify-center gap-x-1 bg-gradient-to-tr font-handwriting font-semibold">
-          <Logo size={26} />
-        </Link>
-      </div>
+      <Link
+        href="/"
+        className="flex items-center justify-center gap-x-1 bg-gradient-to-tr font-handwriting font-semibold">
+        <Logo size={28} />
+      </Link>
       <Navbar header={header} />
 
       <div className="flex-end flex items-center gap-x-2">
