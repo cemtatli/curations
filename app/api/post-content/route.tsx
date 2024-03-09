@@ -1,4 +1,6 @@
+import parseUrl from '@/lib/parse-url'
 import { postSiteClient } from '@/sanity/lib/client'
+import { checkUrlExists } from '@/sanity/lib/sanity-utils'
 import { NextRequest, NextResponse } from 'next/server'
 
 const verifyRecaptcha = async (gRecaptchaToken: string) => {
@@ -23,6 +25,23 @@ export const POST = async (request: NextRequest) => {
     const recaptchaResult = await verifyRecaptcha(gRecaptchaToken)
     if (!recaptchaResult.success) {
       return NextResponse.json({ message: 'Recaptcha doğrulanamadı' }, { status: 200 })
+    }
+
+    const parsedUrl = parseUrl(url)
+
+    if (!parsedUrl.isHttps) {
+      return NextResponse.json({ message: 'Lütfen https ile başlayan bir url giriniz' }, { status: 200 })
+    }
+
+    if (!parsedUrl.domain) {
+      return NextResponse.json({ message: 'Lütfen geçerli bir url giriniz' }, { status: 200 })
+    }
+
+    if (typeof parsedUrl.domain === 'string') {
+      const isSiteExists = await checkUrlExists(parsedUrl.domain)
+      if (isSiteExists) {
+        return NextResponse.json({ message: 'Site zaten var' }, { status: 200 })
+      }
     }
 
     const newDraftSite = {
